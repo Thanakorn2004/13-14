@@ -5,7 +5,7 @@
         <h5 class="card-header">ผู้ใช้งาน</h5>
         <div class="table-responsive text-nowrap">
           <br>
-            
+
           <table class="table mt-4">
             <thead class="table-dark">
               <tr>
@@ -20,7 +20,7 @@
               </tr>
             </thead>
             <tbody class="table--borderbottom-0">
-              @foreach ($user as $users)    
+              @foreach ($user as $users)
               <tr>
                 <td>{{ $users-> id}}</td>
                 <td>{{ $users-> name}}</td>
@@ -28,8 +28,12 @@
                 <td>{{ $users-> phone}}</td>
                 <td>{{ $users-> address}}</td>
                 <td>{{ $users-> email}}</td>
-                <td> <a href="{{ route ('User.edit',$users-> id) }}" class="btn btn-warning btn-fw">แก้ไข</a>  </td>
-                <td> <a href=" " class="btn btn-danger btn-fw">ลบ</a>  </td>
+                <td>
+                    <a href="{{ route('admin.User.edit', $users-> id) }}" class="btn btn-warning btn-fw">แก้ไข</a>
+                </td>
+                <td>
+                    <a href="{{ route('admin.User.delete', $users-> id) }}" class="btn btn-danger btn-fw">ลบ</a>
+                </td>
               </tr>
               @endforeach
             </tbody>

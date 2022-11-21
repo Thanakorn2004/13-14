@@ -7,5 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Showservice extends Model
 {
+
     use HasFactory;
+
+    protected $teble = 'showservices';
+
+    protected $fillable = [
+
+        'name',
+        'details'
+
+    ];
+
 }

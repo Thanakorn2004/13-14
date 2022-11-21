@@ -4,7 +4,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index.php"> <img src="{{ asset('promote/img/logo1.jpg') }} " alt="logo"> </a>
+                        <a class="navbar-brand" href="index.php"> <img src="{{ asset('promote/img/logo1.jpg') }} " width="80px" height="80px" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -15,25 +15,25 @@
                             id="navbarSupportedContent">
                             <ul class="navbar-nav align-items-center">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="/">หน้าแรก</a>
+                                    <a class="nav-link" href="{{ route('promotepage.index') }}">หน้าแรก</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/about">แสดงบริการ</a>
+                                    <a class="nav-link" href="{{ route('promotepage.about') }}">แสดงบริการ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/doctor">แจ้งบริการ</a>
+                                    <a class="nav-link" href="{{ route('promotepage.doctor') }}">แจ้งบริการ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/blog">ประวัติการทำงาน</a>
+                                    <a class="nav-link" href="{{ route('promotepage.blog') }}">ประวัติการทำงาน</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/contact">ผู้จัดทำ</a>
+                                    <a class="nav-link" href="{{ route('promotepage.contact') }}">ผู้จัดทำ</a>
                                 </li>
-                                
+
                                 <li class="nav-item">
-                                <a class="btn_2 d-none d-lg-block" href="{{ route('login') }}">เข้าสู่ระบบ</a>
+                                    <a class="nav-link d-none d-lg-block" href="{{ route('login') }}">เข้าสู่ระบบ</a>
                                 </li>
-                              
+
                             </ul>
                         </div>
                     </nav>

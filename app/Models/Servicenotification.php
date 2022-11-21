@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Servicenotification extends Model
 {
     use HasFactory;
+    protected $teble = 'servicenotifications';
+    protected $fillable = ['name','phone','date','image','details'];
 }

@@ -23,45 +23,54 @@
         <div class="row align-items-center regervation_content">
             <div class="col-lg-7">
                 <div class="regervation_part_iner">
-                    <form>
+                    <form class="user" method="POST" action="{{route('promotepage.insert')}}" enctype="multipart/form-data">
+                        @csrf
                         <h2>แจ้งบริการ</h2>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="Name">
+                                <input
+                                type="text"
+                                class="form-control"
+                                id="defaultFormControlInput"
+                                name="name"
+                                placeholder="Name">
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="password" class="form-control" id="inputPassword4"
-                                    placeholder="Email address">
+                                <input
+                                type="text"
+                                class="form-control"
+                                id="defaultFormControlInput"
+                                name="phone"
+                                placeholder="phone">
                             </div>
                             <div class="form-group col-md-6">
-                                <select class="form-control" id="Select">
-                                    <option value="1" selected>Select service</option>
-                                    <option value="2">Name of service</option>
-                                    <option value="3">Name of service</option>
-                                    <option value="4">Name of service</option>
-                                    <option value="5">Name of service</option>
-                                </select>
+                                <input
+                                type="text"
+                                class="form-control"
+                                id="defaultFormControlInput"
+                                name="date"
+                                placeholder="date">
                             </div>
                             <div class="form-group time_icon col-md-6">
-                                <select class="form-control" id="Select2">
-                                    <option value="" selected>Time</option>
-                                    <option value="1">8 AM TO 10AM</option>
-                                    <option value="1">10 AM TO 12PM</option>
-                                    <option value="1">12PM TO 2PM</option>
-                                    <option value="1">2PM TO 4PM</option>
-                                    <option value="1">4PM TO 6PM</option>
-                                    <option value="1">6PM TO 8PM</option>
-                                    <option value="1">4PM TO 10PM</option>
-                                    <option value="1">10PM TO 12PM</option>
-                                </select>
+                                <input
+                                type="file"
+                                class="form-control"
+                                id="inputGroupFile02"
+                                name="image"
+                                placeholder="image">
                             </div>
                             <div class="form-group col-md-12">
-                                <textarea class="form-control" id="Textarea" rows="4"
-                                    placeholder="Your Note "></textarea>
+                                <input
+                                type="text"
+                                class="form-control"
+                                id="defaultFormControlInput"
+                                name="details"
+                                placeholder="details"></textarea>
                             </div>
                         </div>
                         <div class="regerv_btn">
-                            <a href="#" class="btn_2">Make an Appointment</a>
+                            <button type="submit" class="btn btn-primary mt-3">ส่ง</button>
+
                         </div>
                     </form>
                 </div>

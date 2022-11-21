@@ -4,8 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Showservice;
+use App\Models\Servicenotification;
+use App\Models\Workhistory;
+use App\Models\Organizers;
+
 class HomeController extends Controller
 {
+
     /**
      * Create a new controller instance.
      *
@@ -26,7 +32,18 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function admin(){
-        return view('admin.index');
+    public function admin(Showservice $showservice)
+    {
+
+        return view('admin.index', [
+
+            "count_showservice" => Showservice::count(),
+            "count_service_notification" => Servicenotification::count(),
+            "count_workhistory" => Workhistory::count(),
+            "count_organizers" => Organizers::count()
+
+        ]);
+
     }
+
 }

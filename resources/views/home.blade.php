@@ -16,7 +16,6 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
     <!-- Custom styles for this template-->
     <link href="{{ asset('back-end/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
@@ -28,7 +27,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        
+
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -43,7 +42,7 @@
             <i class="fa fa-bars"></i>
         </button>
 
-        
+
 
         <!-- Topbar Navbar -->
         <ul class="navbar-nav ml-auto">
@@ -72,7 +71,7 @@
                 </div>
             </li>
 
-            
+
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->
@@ -108,13 +107,13 @@
     </nav>
     <!-- End of Topbar -->
             <div id="content">
-                
+
                 <!-- Content wrapper -->
                 <div class="content-wrapper">
                     <!-- Content -->
 
                     <div class="container-xxl flex-grow-1 container-p-y">
-                       
+
                         <div class="col-md-6 col-lg-4 mb-6 mx-auto">
                             <div class="card h-50">
                                 <img class="card-img" src="{{ asset('back-end/img/undraw_profile.svg') }}" alt="" />
@@ -142,12 +141,12 @@
                         </div>
 
                     </div>
-                     
+
                     </div>
                     <!-- / Content -->
 
             </div>
-            
+
             <!-- End of Main Content -->
 
             <!-- Footer -->

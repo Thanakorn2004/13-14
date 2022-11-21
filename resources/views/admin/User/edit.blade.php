@@ -6,12 +6,13 @@
         <h5 class="card-header">แก้ไข-ผู้ใช้งาน</h5>
         <div class="card-body">
           <div>
-            <form action="{{ route('User.update',$user->id) }}" method="post">
+            <form action="{{ route('admin.User.update', request('id')) }}" method="post">
               @csrf
               <label for="defaultFormControlInput" class="form-label">ชื่อ</label>
             <input
               type="text"
               value="{{ $user->name}}"
+              name="name"
               class="form-control"
               id="defaultFormControlInput"
               aria-describedby="defaultFormControlHelp"
@@ -20,6 +21,7 @@
             <input
               type="text"
               value="{{ $user->username}}"
+              name="username"
               class="form-control"
               id="defaultFormControlInput"
               aria-describedby="defaultFormControlHelp"
@@ -28,6 +30,7 @@
             <input
               type="text"
               value="{{ $user->phone}}"
+              name="phone"
               class="form-control"
               id="defaultFormControlInput"
               aria-describedby="defaultFormControlHelp"
@@ -36,6 +39,7 @@
             <input
               type="text"
               value="{{ $user->address}}"
+              name="address"
               class="form-control"
               id="defaultFormControlInput"
               aria-describedby="defaultFormControlHelp"
@@ -44,11 +48,12 @@
             <input
               type="text"
               value="{{ $user->email}}"
+              name="email"
               class="form-control"
               id="defaultFormControlInput"
               aria-describedby="defaultFormControlHelp"
             />
-            <input class="btn btn-primary mt-3 mx-2" type="submit" value="อัปเดต">
+            <button type="submit" class="btn btn-primary mt-3">บันทึก</button>
             <a href="{{ route('User.index') }}" class="btn btn-danger mt-3 mx-2">ย้อนกลับ</a>
             </form>
           </div>

@@ -9,47 +9,40 @@
           <table class="table mt-4">
             <thead class="table-dark">
               <tr>
+                <th>No.</th>
                 <th>ชื่อ</th>
                 <th>นามสกุล</th>
                 <th>เบอร์โทร</th>
                 <th>หน้าที่</th>
+                <th>รูปภาพ</th>
+                <th>เพิ่มวันที่</th>
+                <th>แก้ไขล่าสุด</th>
                 <th>แก้ไข</th>
                 <th>ลบ</th>
               </tr>
             </thead>
             <tbody class="table-border-bottom-0">
+              @foreach ($organizers as $rows)
               <tr>
-                <td>นายธนากร</td>
-                <td>วัฒนปฤดา</td>
-                <td>096.........</td>
-                <td><label class="badge badge-info">Front_End</label></td>
-                <td> <a href="edit_table.php" class="btn btn-warning btn-fw">แก้ไข</a>  </td>
-                <td> <a href="type_productdelete.php" class="btn btn-danger btn-fw">ลบ</a>  </td>
+                <td>{{ $rows-> organizer_id}}</td>
+                <td>{{ $rows-> name}}</td>
+                <td>{{ $rows-> username}}</td>
+                <td>{{ $rows-> phone}}</td>
+                <td>{{ $rows-> role}}</td>
+                <td>
+                  <img src="{{ asset('/back-end/upload/Organizers/'.$rows->organizer_image) }}"
+                  width="150px" height="150px" alt="">
+                </td>
+                <td>{{ $rows-> created_at}}</td>
+                <td>{{ $rows-> updated_at}}</td>
+                <td>
+                    <a href="{{ route('admin.Organizer.edit', $rows->organizer_id) }}" class="btn btn-warning btn-fw">แก้ไข</a>
+                </td>
+                <td>
+                    <a href="{{ route('admin.Organizer.delete', $rows->organizer_id) }}" class="btn btn-danger btn-fw">ลบ</a>
+                </td>
               </tr>
-              <tr>
-                <td>นายจรรญพร</td>
-                <td>ประเสริฐกุล</td>
-                <td>..........</td>
-                <td><label class="badge badge-success">Back_End</label></td>
-                <td> <a href="edit_table.php" class="btn btn-warning btn-fw">แก้ไข</a>  </td>
-                <td> <a href="type_productdelete.php" class="btn btn-danger btn-fw">ลบ</a>  </td>
-              </tr>
-              <tr>
-                <td>นายกฤษดาวัลย์</td>
-                <td>ปานทอง</td>
-                <td>..........</td>
-                <td><label class="badge badge-danger">Testter</label></td>
-                <td> <a href="edit_table.php" class="btn btn-warning btn-fw">แก้ไข</a>  </td>
-                <td> <a href="type_productdelete.php" class="btn btn-danger btn-fw">ลบ</a>  </td>
-              </tr>
-              <tr>
-                <td>นายสหภัส</td>
-                <td>อินจันทร์</td>
-                <td>..........</td>
-                <td><label class="badge badge-danger">Testter</label></td>
-                <td> <a href="edit_table.php" class="btn btn-warning btn-fw">แก้ไข</a>  </td>
-                <td> <a href="type_productdelete.php" class="btn btn-danger btn-fw">ลบ</a>  </td>
-              </tr>
+              @endforeach
             </tbody>
           </table>
         </div>

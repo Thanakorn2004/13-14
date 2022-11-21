@@ -6,16 +6,38 @@
         <h5 class="card-header">เพิ่ม-ประวัติการทำงาน</h5>
         <div class="card-body">
           <div>
+            <form action="{{ route('Workhistory.insert') }}" method="POST" enctype="multipart/form-data">
+              @csrf
             <label for="defaultFormControlInput" class="form-label">Name</label>
             <input
               type="text"
               class="form-control"
               id="defaultFormControlInput"
-              placeholder="กรุณากรอกประเภทสินค้า"
+              placeholder="กรุณากรอกข้อมูล"
               aria-describedby="defaultFormControlHelp"
+              name="name"
             />
-            <a href="" class="btn btn-primary mt-3">บันทึก</a>
+            <label for="defaultFormControlInput" class="form-label">history</label>
+            <input
+              type="text"
+              class="form-control"
+              id="defaultFormControlInput"
+              placeholder="กรุณากรอกข้อมูล"
+              aria-describedby="defaultFormControlHelp"
+              name="history"
+            />
+            <label for="defaultFormControlInput" class="form-label">history_image</label>
+            <input
+              type="file"
+              class="form-control"
+              id="inputGroupFile02"
+              placeholder="กรุณากรอกข้อมูล"
+              aria-describedby="defaultFormControlHelp"
+              name="history_image"
+            />
+            <button type="submit" class="btn btn-primary mt-3">บันทึก</button>
             <a href="{{ route('Workhistory.index') }}" class="btn btn-danger mt-3 mx-2">ย้อนกลับ</a>
+            </form>
           </div>
         </div>
       </div>

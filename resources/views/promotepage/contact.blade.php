@@ -27,56 +27,22 @@
                 </div>
             </div>
             <div class="row">
+                @foreach ($organizers as $rows)
                 <div class="col-sm-6 col-lg-3">
                     <div class="single_blog_item">
                         <div class="single_blog_img">
-                            <img src="img/organizer/organizer_1.png" alt="doctor">
+                            <img src="{{ asset('/back-end/upload/Organizers/'.$rows->organizer_image) }} " width="300px" height="300px" alt="doctor">
                         </div>
                         <div class="single_text">
-                            <div class="single_blog_text">
-                                <h3> นายจรรญพร  ประเสริฐกุล</h3>
+                            <div class="single_blog_text align-items-center">
+                                <h3>{{ $rows-> name}}  {{ $rows-> username}}</h3>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="single_blog_item">
-                        <div class="single_blog_img">
-                            <img src="img/organizer/organizer_2.jpg" alt="doctor">
-                        </div>
-                        <div class="single_text">
-                            <div class="single_blog_text">
-                                <h3> นายธนากร  วัฒนปฤดา</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="single_blog_item">
-                        <div class="single_blog_img">
-                            <img src="img/organizer/organizer_3.jpg" alt="doctor">
-                        </div>
-                        <div class="single_text">
-                            <div class="single_blog_text">
-                                <h3> นายกฤษดาวัลย์ ปานทอง</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="single_blog_item">
-                        <div class="single_blog_img">
-                            <img src="img/organizer/organizer_4.png" alt="doctor">
-                        </div>
-                        <div class="single_text">
-                            <div class="single_blog_text">
-                                <h3> นายสหภัส อินจันทร์</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
-    
+
 @endsection
