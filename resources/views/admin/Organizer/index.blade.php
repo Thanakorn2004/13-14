@@ -9,7 +9,8 @@
           <table class="table mt-4">
             <thead class="table-dark">
               <tr>
-                <th>No.</th>
+                <th>ลำดับ</th>
+                <th>รหัสผู้จัดทำ</th>
                 <th>ชื่อ</th>
                 <th>นามสกุล</th>
                 <th>เบอร์โทร</th>
@@ -22,13 +23,26 @@
               </tr>
             </thead>
             <tbody class="table-border-bottom-0">
-              @foreach ($organizers as $rows)
+              @foreach ($organizers as $key => $rows)
               <tr>
-                <td>{{ $rows-> organizer_id}}</td>
-                <td>{{ $rows-> name}}</td>
-                <td>{{ $rows-> username}}</td>
-                <td>{{ $rows-> phone}}</td>
-                <td>{{ $rows-> role}}</td>
+                <td>
+                    {{ $key + 1 }}
+                </td>
+                <td>
+                    {{ $rows-> organizer_id}}
+                </td>
+                <td>
+                    {{ $rows-> name}}
+                </td>
+                <td>
+                    {{ $rows-> username}}
+                </td>
+                <td>
+                    {{ $rows-> phone}}
+                </td>
+                <td>
+                    {{ $rows-> role}}
+                </td>
                 <td>
                   <img src="{{ asset('/back-end/upload/Organizers/'.$rows->organizer_image) }}"
                   width="150px" height="150px" alt="">

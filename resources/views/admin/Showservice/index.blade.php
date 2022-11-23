@@ -9,7 +9,7 @@
           <table class="table mt-4">
             <thead class="table-dark">
               <tr>
-                <th>ลำดับ.</th>
+                <th>ลำดับ</th>
                 <th>รหัสบริการ</th>
                 <th>หัวข้อ</th>
                 <th>รายระเอียด</th>
@@ -35,10 +35,10 @@
                             {{ $rows->details }}
                         </td>
                         <td>
-                            {{ $rows->created_at }}
+                            {{ $rows->created_at->thaidate(); }}
                         </td>
                         <td>
-                            {{ $rows->updated_at }}
+                            {{ $rows->updated_at->thaidate(); }}
                         </td>
                         <td>
                             <a

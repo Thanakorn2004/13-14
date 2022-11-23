@@ -9,7 +9,8 @@
           <table class="table mt-4">
             <thead class="table-dark">
               <tr>
-                <th>No.</th>
+                <th>ลำดับ</th>
+                <th>รหัสแจ้งบริการ</th>
                 <th>ชื่อ-นามสกุล</th>
                 <th>เบอร์โทร</th>
                 <th>วันที่</th>
@@ -20,12 +21,23 @@
               </tr>
             </thead>
             <tbody class="table--borderbottom-0">
-              @foreach ($servicenotification as $users)
+              @foreach ($servicenotification as $key => $users)
               <tr>
-                <td>{{ $users-> id}}</td>
-                <td>{{ $users-> name}}</td>
-                <td>{{ $users-> phone}}</td>
-                <td>{{ $users-> date}}</td>
+                <td>
+                    {{ $key + 1 }}
+                </td>
+                <td>
+                    {{ $users-> id}}
+                </td>
+                <td>
+                    {{ $users-> name}}
+                </td>
+                <td>
+                    {{ $users-> phone}}
+                </td>
+                <td>
+                    {{ $users-> date}}
+                </td>
                 <td>
                     <img src="{{ asset('/back-end/upload/Servicenotification/'.$users->image) }}"
                     width="150px" height="150px" alt="">
