@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('workhistories', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('history');
+            $table->string('history_image');
             $table->timestamps();
         });
     }
